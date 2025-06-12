@@ -1,0 +1,72 @@
+/* Reset & Base Setup */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html, body {
+  height: 100%;
+  overflow: hidden;
+  font-family: monospace;
+}
+
+/* Matrix Background */
+canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 0;
+}
+
+/* ✅ Clock Centered Here */
+#clock {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 64px;
+  z-index: 1;
+  color: white;
+  text-shadow: 0 0 10px #0f0;
+}
+
+/* Theme Toggle Button */
+#toggle-mode {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-size: 24px;
+  padding: 8px 12px;
+  z-index: 2;
+  cursor: pointer;
+  background: transparent;
+  border: 2px solid white;
+  color: white;
+  border-radius: 6px;
+}
+
+/* Dark Mode Theme */
+body.dark {
+  background-color: black;
+  color: #0f0;
+}
+body.dark #clock {
+  color: #0f0;
+  text-shadow: 0 0 10px #0f0;
+}
+body.dark #toggle-mode {
+  border-color: #0f0;
+  color: #0f0;
+}
+body.light {
+  background-color: white;
+  color: #00f;
+}
+body.light #clock {
+  color: #00f;
+  text-shadow: 0 0 10px #00f;
+}
+body.light #toggle-mode {
+  border-color: #00f;
+  color: #00f;
+}
